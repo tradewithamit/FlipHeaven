@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip Heaven</title>
+    <link rel="shortcut icon"
+        href="https://cdn-icons-png.freepik.com/512/869/869441.png?uid=R28211235&ga=GA1.1.878421257.1716085412"
+        type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-purple-600 to-purple-200 min-h-screen text-white">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center px-6 py-4 bg-purple-700 text-white">
+        <h1 class="text-2xl font-bold">FlipHeaven</h1>
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+            
+            <a href="privacy.html" target="main" class="hover:text-purple-300">Privacy Policy</a>
+            <a href="tearms.html" target="main" class="hover:text-purple-300">Terms & Conditions</a>
+            <a href="refund.html" target="main" class="hover:text-purple-300">Refund Policy</a>
+            <a href="contact.html" target="main" class="hover:text-purple-300">Contact Info</a>
+        </nav>
+        <!-- Cart Button -->
+        <button onclick="toggleCart()" class="relative">
+            🛒
+            <span id="cart-count"
+                class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-2 rounded-full">0</span>
+        </button>
+    </header>
+
+    <!-- Categories -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6">
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
+            <img src="https://m.media-amazon.com/images/I/31UYycMaMGL._SY450_.jpg" alt="Category 1"
+                class="mx-auto mb-2 rounded-lg">
+            <h2 class="font-semibold mb-2"><a href="earphone.html" target="main">Wired in Ear Earphone Compatible with
+                    realme Buds 3 Type-C Jack,in-line
+                    Microphone, 9mm Drivers, Intigrated Controls (Black)</a></h2>
+                    
+            <button onclick="addToCart(
+                     'Wired in Ear Earphone Compatible with realme Buds 3 Type-C Jack',
+                     'earphone.html',
+                     'https://m.media-amazon.com/images/I/31UYycMaMGL._SY450_.jpg'
+                     )" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+                Add to Cart
+            </button>
+
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
+                    href="https://rzp.io/rzp/hWNvU08Y">₹-199</a></button>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a href="earphone.html"
+                    target="main">Details</a></button>
+
+        </div>
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
+            <img src="https://via.placeholder.com/150" alt="Category 2" class="mx-auto mb-2 rounded-lg">
+            <h2 class="font-semibold mb-2">Product 2</h2>
+            <button onclick="addToCart('Product 2', '#')"
+                class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Add to Cart</button>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
+                    href="https://en.wikipedia.org/wiki/Trading_strategy">buy now</a></button>
+        </div>
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
+            <img src="https://via.placeholder.com/150" alt="Category 3" class="mx-auto mb-2 rounded-lg">
+            <h2 class="font-semibold mb-2">Product 3</h2>
+            <button onclick="addToCart('Product 3', '#')"
+                class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Add to Cart</button>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
+                    href="https://en.wikipedia.org/wiki/Trading_strategy">buy now</a></button>
+        </div>
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
+            <img src="https://via.placeholder.com/150" alt="Category 4" class="mx-auto mb-2 rounded-lg">
+            <h2 class="font-semibold mb-2">Product 4</h2>
+            <button onclick="addToCart('Product 4', '#')"
+                class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Add to Cart</button>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
+                    href="https://en.wikipedia.org/wiki/Trading_strategy">buy now</a></button>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div id="cart"
+        class="fixed right-0 top-0 h-full w-64 bg-white text-black shadow-lg p-4 transform translate-x-full transition-transform duration-300 z-50">
+        <h2 class="text-xl font-semibold mb-4">Your Cart</h2>
+        <ul id="cart-items" class="space-y-2"></ul>
+        <button onclick="toggleCart()"
+            class="mt-6 w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700">Close</button>
+    </div>
+
+    <!-- Footer (Mobile View Only Links) -->
+    <footer class="md:hidden mt-10 px-6 py-6 bg-purple-800 text-center text-sm text-purple-200 space-y-2">
+        <a href="privacy.html" target="main" class="block hover:text-white">Privacy Policy</a>
+        <a href="tearms.html" target="main" class="block hover:text-white">Terms & Conditions</a>
+        <a href="refund.html" target="main" class="block hover:text-white">Refund Policy</a>
+        <a href="contact.html" target="main" class="block hover:text-white">Contact Info</a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        let cartItems = [];
+
+        function toggleCart() {
+            const cart = document.getElementById("cart");
+            cart.classList.toggle("translate-x-full");
+        }
+
+        // Ab productName, link ke saath image bhi le raha hai
+        function addToCart(productName, link, image) {
+            cartItems.push({ name: productName, link: link, image: image });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById("cart-items");
+            const cartCount = document.getElementById("cart-count");
+
+            cartList.innerHTML = '';
+            cartItems.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.className = "flex items-center gap-2 bg-gray-100 p-2 rounded";
+
+                li.innerHTML = `
+                <img src="${item.image}" alt="Product Image" class="w-10 h-10 object-cover rounded">
+                <a href="${item.link}" class="text-blue-600 hover:underline flex-1">${item.name}</a>
+                <button onclick="removeFromCart(${index})" class="text-red-500">❌</button>
+            `;
+                cartList.appendChild(li);
+            });
+
+            cartCount.textContent = cartItems.length;
+        }
+
+        function removeFromCart(index) {
+            cartItems.splice(index, 1);
+            updateCart();
+        }
+    </script>
+
+
+</body>
+
+</html>
