@@ -151,8 +151,9 @@
         </div>
         <!-- Delivery Info -->
         <p class="text-sm text-gray-500 mt-2">
-          FREE delivery by <strong>Wednesday, 30 July</strong>
-        </p>
+  FREE delivery by <strong id="delivery-date">Wednesday, 30 July</strong>
+</p>
+
         <p class="text-sm text-gray-600">
           Sold by <strong>Psyler</strong> | Delivered by Amazon
         </p>
@@ -201,6 +202,17 @@
       }
     });
   </script>
+  <script>
+  // Set delivery date = today + 7 days
+  const today = new Date();
+  today.setDate(today.getDate() + 7);
+
+  const options = { weekday: 'long', day: 'numeric', month: 'long' };
+  const formatted = today.toLocaleDateString('en-IN', options);
+
+  document.getElementById("delivery-date").innerText = formatted;
+</script>
+
 </body>
 
 
