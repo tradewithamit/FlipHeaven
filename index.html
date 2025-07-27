@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flip Heaven</title>
-<!-- Font Awesome v6 -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome v6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="shortcut icon"
         href="https://cdn-icons-png.freepik.com/512/869/869441.png?uid=R28211235&ga=GA1.1.878421257.1716085412"
         type="image/x-icon">
@@ -15,6 +15,28 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+        }
+
+        .dussehra-banner {
+            width: 100%;
+            background: linear-gradient(90deg, #ff9933, #ffcc66);
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            padding: 6px 10px;
+            font-size: 14px;
+            font-family: sans-serif;
+            margin-top: 10px;
+            /* Header ke baad thoda gap */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Mobile responsive tweaks */
+        @media (max-width: 600px) {
+            .dussehra-banner {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
         }
     </style>
 </head>
@@ -25,12 +47,13 @@
     <header class="flex justify-between items-center px-6 py-4 bg-purple-700 text-white">
         <h1 class="text-2xl font-bold">FlipHeaven</h1>
         <nav class="hidden md:flex space-x-6 text-sm font-medium">
-            
+
             <a href="privacy.html" target="main" class="hover:text-purple-300">Privacy Policy</a>
             <a href="tearms.html" target="main" class="hover:text-purple-300">Terms & Conditions</a>
             <a href="refund.html" target="main" class="hover:text-purple-300">Refund Policy</a>
             <a href="contact.html" target="main" class="hover:text-purple-300">Contact Info</a>
         </nav>
+
         <!-- Cart Button -->
         <button onclick="toggleCart()" class="relative">
             🛒
@@ -38,54 +61,54 @@
                 class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-2 rounded-full">0</span>
         </button>
     </header>
+    <div class="dussehra-banner">
+        🎉 40% Discount on every product – Dussehra Special 🎉
+    </div>
 
     <!-- Categories -->
     <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6">
         <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
-            <img src="https://m.media-amazon.com/images/I/31UYycMaMGL._SY450_.jpg" alt="Category 1"
-                class="mx-auto mb-2 rounded-lg">
-            <h2 class="font-semibold mb-2"><a href="earphone.html" target="main">Wired in Ear Earphone Compatible with
-                    realme Buds 3 Type-C Jack,in-line
-                    Microphone, 9mm Drivers, Intigrated Controls (Black)</a></h2>
-                    
+            <img src="https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3df0c06c/images/Fastrack/Catalog/3286KM01_1.jpg?sw=600&sh=600"
+                alt="Category 1" class="mx-auto mb-2 rounded-lg">
+            <h2 class="font-semibold mb-2"><a href="watch1.html" target="main">Fastrack Thor Quartz Multifunction Red
+                    Dial Metal Strap Watch for Guys (Black)</a></h2>
+
             <button onclick="addToCart(
-                     'Wired in Ear Earphone Compatible with realme Buds 3 Type-C Jack',
-                     'earphone.html',
-                     'https://m.media-amazon.com/images/I/31UYycMaMGL._SY450_.jpg'
-                     )" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"> <i class="fa-solid fa-cart-shopping"></i>
-               To Cart
+                     'Fastrack Thor Quartz Multifunction Red Dial Metal Strap Watch for Guys',
+                     'watch1.html',
+                     'https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3df0c06c/images/Fastrack/Catalog/3286KM01_1.jpg?sw=600&sh=600'
+                     )" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"> <i
+                    class="fa-solid fa-cart-shopping"></i>
+                To Cart
             </button>
 
             <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
                     href="https://rzp.io/rzp/hKB7mni">₹-399</a></button>
-            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a href="earphone.html"
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a href="watch1.html"
                     target="main">Details</a></button>
 
         </div>
         <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
-            <img src="https://via.placeholder.com/150" alt="Category 2" class="mx-auto mb-2 rounded-lg">
-            <h2 class="font-semibold mb-2">Product 2</h2>
-            <button onclick="addToCart('Product 2', '#')"
-                class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Add to Cart</button>
+            <img src="https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw2b3b7823/images/Fastrack/Catalog/33056296QM02P_1.jpg?sw=600&sh=600"
+                alt="Category 1" class="mx-auto mb-2 rounded-lg">
+            <h2 class="font-semibold mb-2"><a href="watch2.html" target="main">Fastrack Mixmatched Quartz Analog Metal Strap Watch For Couple (Brown)</a></h2>
+
+            <button onclick="addToCart(
+                     'Fastrack Mixmatched Quartz Analog Brown Dial With Brown Metal Strap Watch For Couple',
+                     'watch2.html',
+                     'https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw2b3b7823/images/Fastrack/Catalog/33056296QM02P_1.jpg?sw=600&sh=600'
+                     )" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"> <i
+                    class="fa-solid fa-cart-shopping"></i>
+                To Cart
+            </button>
+
             <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
-                    href="https://en.wikipedia.org/wiki/Trading_strategy">buy now</a></button>
+                    href="https://rzp.io/rzp/hKB7mni">₹-2,149</a></button>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a href="watch2.html"
+                    target="main">Details</a></button>
+
         </div>
-        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
-            <img src="https://via.placeholder.com/150" alt="Category 3" class="mx-auto mb-2 rounded-lg">
-            <h2 class="font-semibold mb-2">Product 3</h2>
-            <button onclick="addToCart('Product 3', '#')"
-                class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Add to Cart</button>
-            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
-                    href="https://en.wikipedia.org/wiki/Trading_strategy">buy now</a></button>
-        </div>
-        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
-            <img src="https://via.placeholder.com/150" alt="Category 4" class="mx-auto mb-2 rounded-lg">
-            <h2 class="font-semibold mb-2">Product 4</h2>
-            <button onclick="addToCart('Product 4', '#')"
-                class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Add to Cart</button>
-            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
-                    href="https://en.wikipedia.org/wiki/Trading_strategy">buy now</a></button>
-        </div>
+
     </section>
 
     <!-- Cart Sidebar -->
@@ -150,3 +173,4 @@
 </body>
 
 </html>
+<!-- main bgc background: linear-gradient(135deg, #6a11cb, #2575fc); -->
