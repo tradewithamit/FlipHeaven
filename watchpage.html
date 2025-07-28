@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip Heaven</title>
+    <!-- Font Awesome v6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon"
+        href="https://cdn-icons-png.freepik.com/512/869/869441.png?uid=R28211235&ga=GA1.1.878421257.1716085412"
+        type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        button {
+            color: #4B0082;
+            /* Deep purple for premium look */
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        del {
+            color: #e60000;
+            /* bold but not too dark red */
+            background-color: #ffeaea;
+            /* very light pink */
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .dussehra-banner {
+            width: 100%;
+            background: linear-gradient(90deg, #ff9933, #ffcc66);
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            padding: 6px 10px;
+            font-size: 14px;
+            font-family: sans-serif;
+            margin-top: 10px;
+            /* Header ke baad thoda gap */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Mobile responsive tweaks */
+        @media (max-width: 600px) {
+            .dussehra-banner {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-purple-600 to-purple-200 min-h-screen text-white">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center px-6 py-4 bg-purple-700 text-white">
+        <h1 class="text-2xl font-bold">FlipHeaven</h1>
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+
+            <a href="privacy.html" target="main" class="hover:text-purple-300">Privacy Policy</a>
+            <a href="tearms.html" target="main" class="hover:text-purple-300">Terms & Conditions</a>
+            <a href="refund.html" target="main" class="hover:text-purple-300">Refund Policy</a>
+            <a href="contact.html" target="main" class="hover:text-purple-300">Contact Info</a>
+        </nav>
+
+        <!-- Cart Button -->
+        <button onclick="toggleCart()" class="relative">
+            🛒
+            <span id="cart-count"
+                class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-2 rounded-full">0</span>
+        </button>
+    </header>
+    <div class="dussehra-banner">
+        🎉 60% Discount on every product – Dussehra Special 🎉
+    </div>
+
+    <!-- Categories -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6">
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
+            <img src="https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3df0c06c/images/Fastrack/Catalog/3286KM01_1.jpg?sw=600&sh=600"
+                alt="Category 1" class="mx-auto mb-2 rounded-lg">
+            <h2 class="font-semibold mb-2"><a href="watch1.html" target="main">Fastrack Thor Quartz Multifunction Red
+                    Dial Metal Strap Watch<del>5,195</del></a></h2>
+
+            <button onclick="addToCart(
+                     'Fastrack Thor Quartz Multifunction Red Dial Metal Strap Watch for Guys',
+                     'watch1.html',
+                     'https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3df0c06c/images/Fastrack/Catalog/3286KM01_1.jpg?sw=600&sh=600'
+                     )" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"> <i
+                    class="fa-solid fa-cart-shopping"></i>
+                To Cart
+            </button>
+
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
+                    href="https://rzp.io/rzp/hKB7mni">₹1,999</a></button>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a href="watch1.html"
+                    target="main">Details</a></button>
+
+        </div>
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
+            <img src="https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw2b3b7823/images/Fastrack/Catalog/33056296QM02P_1.jpg?sw=600&sh=600"
+                alt="Category 1" class="mx-auto mb-2 rounded-lg">
+            <h2 class="font-semibold mb-2"><a href="watch2.html" target="main">Fastrack Mixmatched Quartz Analog Metal
+                    Strap Watch For Couple <del>5,695</del></a></h2>
+
+            <button onclick="addToCart(
+                     'Fastrack Mixmatched Quartz Analog Brown Dial With Brown Metal Strap Watch For Couple',
+                     'watch2.html',
+                     'https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw2b3b7823/images/Fastrack/Catalog/33056296QM02P_1.jpg?sw=600&sh=600'
+                     )" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"> <i
+                    class="fa-solid fa-cart-shopping"></i>
+                To Cart
+            </button>
+
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
+                    href="https://rzp.io/rzp/hKB7mni">₹2,149</a></button>
+            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a href="watch2.html"
+                    target="main">Details</a></button>
+
+        </div>
+
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div id="cart"
+        class="fixed right-0 top-0 h-full w-64 bg-white text-black shadow-lg p-4 transform translate-x-full transition-transform duration-300 z-50">
+        <h2 class="text-xl font-semibold mb-4">Your Cart</h2>
+        <ul id="cart-items" class="space-y-2"></ul>
+        <button onclick="toggleCart()"
+            class="mt-6 w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700">Close</button>
+    </div>
+
+    <!-- Footer (Mobile View Only Links) -->
+    <footer class="md:hidden mt-10 px-6 py-6 bg-purple-800 text-center text-sm text-purple-200 space-y-2">
+        <a href="privacy.html" target="main" class="block hover:text-white">Privacy Policy</a>
+        <a href="tearms.html" target="main" class="block hover:text-white">Terms & Conditions</a>
+        <a href="refund.html" target="main" class="block hover:text-white">Refund Policy</a>
+        <a href="contact.html" target="main" class="block hover:text-white">Contact Info</a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        let cartItems = [];
+
+        function toggleCart() {
+            const cart = document.getElementById("cart");
+            cart.classList.toggle("translate-x-full");
+        }
+
+        // Ab productName, link ke saath image bhi le raha hai
+        function addToCart(productName, link, image) {
+            cartItems.push({ name: productName, link: link, image: image });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById("cart-items");
+            const cartCount = document.getElementById("cart-count");
+
+            cartList.innerHTML = '';
+            cartItems.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.className = "flex items-center gap-2 bg-gray-100 p-2 rounded";
+
+                li.innerHTML = `
+                <img src="${item.image}" alt="Product Image" class="w-10 h-10 object-cover rounded">
+                <a href="${item.link}" class="text-blue-600 hover:underline flex-1">${item.name}</a>
+                <button onclick="removeFromCart(${index})" class="text-red-500">❌</button>
+            `;
+                cartList.appendChild(li);
+            });
+
+            cartCount.textContent = cartItems.length;
+        }
+
+        function removeFromCart(index) {
+            cartItems.splice(index, 1);
+            updateCart();
+        }
+    </script>
+
+
+</body>
+
+</html>
+<!-- main bgc background: linear-gradient(135deg, #6a11cb, #2575fc); -->
