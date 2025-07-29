@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flip Heaven</title>
+    <title>watchpage/Flip Heaven</title>
     <!-- Font Awesome v6 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="shortcut icon"
@@ -13,6 +13,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
+        @keyframes zoomInOut {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .animate-pulse-custom {
+            animation: zoomInOut 1.2s ease-in-out infinite;
+        }
+
+        .category-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
         button {
             color: #4B0082;
             /* Deep purple for premium look */
@@ -34,25 +57,23 @@
             font-family: 'Inter', sans-serif;
         }
 
-        .dussehra-banner {
-            width: 100%;
-            background: linear-gradient(90deg, #ff9933, #ffcc66);
-            color: #000;
+        .marquee-banner {
+            background-color: #fff176;
+            /* Yellowish background */
+            color: #b71c1c;
+            /* Deep red text */
             font-weight: bold;
-            text-align: center;
-            padding: 6px 10px;
-            font-size: 14px;
-            font-family: sans-serif;
-            margin-top: 10px;
-            /* Header ke baad thoda gap */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 12px 0;
+            font-size: 1.2rem;
+            font-family: Arial, sans-serif;
+            border-top: 2px solid #fbc02d;
+            border-bottom: 2px solid #fbc02d;
         }
 
-        /* Mobile responsive tweaks */
         @media (max-width: 600px) {
-            .dussehra-banner {
-                font-size: 12px;
-                padding: 4px 8px;
+            .marquee-banner {
+                font-size: 1rem;
+                padding: 10px 0;
             }
         }
     </style>
@@ -64,7 +85,7 @@
     <header class="flex justify-between items-center px-6 py-4 bg-purple-700 text-white">
         <h1 class="text-2xl font-bold">FlipHeaven</h1>
         <nav class="hidden md:flex space-x-6 text-sm font-medium">
-
+            <a href="index.html" target="main" class="block hover:text-white">Home</a>
             <a href="privacy.html" target="main" class="hover:text-purple-300">Privacy Policy</a>
             <a href="tearms.html" target="main" class="hover:text-purple-300">Terms & Conditions</a>
             <a href="refund.html" target="main" class="hover:text-purple-300">Refund Policy</a>
@@ -78,52 +99,404 @@
                 class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-2 rounded-full">0</span>
         </button>
     </header>
-    <div class="dussehra-banner">
-        🎉 60% Discount on every product – Dussehra Special 🎉
+    <marquee class="marquee-banner" behavior="scroll" direction="left" scrollamount="6">
+        🎉 60% Discount on Every Product – Limited Time Offer! 🛒 &nbsp;&nbsp;&nbsp; 🎉 60% Discount on Every Product –
+        Limited Time Offer! 🛒 &nbsp;&nbsp;&nbsp; 🎉 60% Discount on Every Product – Limited Time Offer! 🛒
+        &nbsp;&nbsp;&nbsp; 🎉 60% Discount on Every Product – Limited Time Offer! 🛒 &nbsp;&nbsp;&nbsp; 🎉 60% Discount
+        on Every Product – Limited Time Offer! 🛒 &nbsp;&nbsp;&nbsp; 🎉 60% Discount on Every Product – Limited Time
+        Offer! 🛒 &nbsp;&nbsp;&nbsp; 🎉 60% Discount on Every Product – Limited Time Offer! 🛒 &nbsp;&nbsp;&nbsp; 🎉 60%
+        Discount on Every Product – Limited Time Offer! 🛒 &nbsp;&nbsp;&nbsp; 🎉 60% Discount on Every Product – Limited
+        Time Offer! 🛒 &nbsp;&nbsp;&nbsp; 🎉 60% Discount on Every Product – Limited Time Offer! 🛒 &nbsp;&nbsp;&nbsp;
+        🎉 60% Discount on Every Product – Limited Time Offer! 🛒 &nbsp;&nbsp;&nbsp; 🎉 60% Discount on Every Product –
+        Limited Time Offer! 🛒
+    </marquee>
+    <div class="grid grid-cols-5 gap-2 p-2 sm:gap-4 sm:p-4">
+        <!-- Example Category -->
+        <a href="watchpage.html" target="main" class="text-center transition transform hover:scale-105">
+            <div class="border-2 border-default-400 hover:border-purple-500 p-1 sm:p-2 rounded-full inline-block">
+                <img src="https://www.argoswatch.in/cdn/shop/files/DSC09097.jpg?v=1747507101&width=823" alt="Watches"
+                    class="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full">
+            </div>
+            <p class="mt-1 sm:mt-2 text-[10px] sm:text-sm font-medium text-default-400 hover:text-purple-600">
+                <b>Watches</b>
+            </p>
+        </a>
+
+        <a href="fashionpage.html" target="main" class="text-center transition transform hover:scale-105">
+            <div class="border-2 border-yellow-300 hover:border-purple-500 p-1 sm:p-2 rounded-full inline-block">
+                <img src="https://i.pinimg.com/736x/1f/c3/d0/1fc3d03a4354060ad4ef63c788d4a538.jpg" alt="Fashion"
+                    class="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full">
+            </div>
+            <p class="mt-1 sm:mt-2 text-[10px] sm:text-sm font-medium text-yellow-300 hover:text-purple-600">
+                <b>Fashion</b>
+            </p>
+        </a>
+
+        <a href="electronicspage.html" target="main" class="text-center transition transform hover:scale-105">
+            <div class="border-2 border-yellow-300 hover:border-purple-500 p-1 sm:p-2 rounded-full inline-block">
+                <img src="https://i.pinimg.com/736x/23/da/bb/23dabbdcc3c0cb53179a937d6ea4b0e4.jpg" alt="Electronics"
+                    class="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full">
+            </div>
+            <p class="mt-1 sm:mt-2 text-[10px] sm:text-sm font-medium text-yellow-300 hover:text-purple-600">
+                <b>Electronics</b>
+            </p>
+        </a>
+
+        <a href="beautypage.html" target="main" class="text-center transition transform hover:scale-105">
+            <div class="border-2 border-yellow-300 hover:border-purple-500 p-1 sm:p-2 rounded-full inline-block">
+                <img src="https://i.pinimg.com/736x/1b/ab/b4/1babb435596919424a6474e5526ce336.jpg" alt="Beauty"
+                    class="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full">
+            </div>
+            <p class="mt-1 sm:mt-2 text-[10px] sm:text-sm font-medium text-yellow-300 hover:text-purple-600">
+                <b>Beauty</b>
+            </p>
+        </a>
+
+        <a href="mobilepage.html" target="main" class="text-center transition transform hover:scale-105">
+            <div class="border-2 border-yellow-300 hover:border-purple-500 p-1 sm:p-2 rounded-full inline-block">
+                <img src="https://i.pinimg.com/736x/a6/a1/ad/a6a1adf917d1974881bd7428fa182c0d.jpg" alt="Mobile"
+                    class="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full">
+            </div>
+            <p class="mt-1 sm:mt-2 text-[10px] sm:text-sm font-medium text-yellow-300 hover:text-purple-600">
+                <b>Mobile</b>
+            </p>
+        </a>
     </div>
+
+
 
     <!-- Categories -->
     <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6">
-        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
-            <img src="https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3df0c06c/images/Fastrack/Catalog/3286KM01_1.jpg?sw=600&sh=600"
-                alt="Category 1" class="mx-auto mb-2 rounded-lg">
-            <h2 class="font-semibold mb-2"><a href="watch1.html" target="main">Fastrack Thor Quartz Multifunction Red
-                    Dial Metal Strap Watch<del>5,195</del></a></h2>
 
-            <button onclick="addToCart(
+
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center max-w-xs mx-auto">
+
+            <!-- Clickable Image with SOLD OUT badge -->
+            <div class="relative">
+                <a href="watch3.html" target="main">
+                    <img src="https://glorywatches.shop/cdn/shop/files/Screenshot2025-02-17at7.55.44PM.png?v=1739802589&width=713"
+                        alt="Category 1" class="mx-auto mb-2 rounded-lg">
+                </a>
+
+                <!-- SOLD OUT badge -->
+                <div
+                    class="absolute bottom-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg animate-pulse-custom">
+                    Sale
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="font-semibold mb-2">
+                <a href="watch3.html" target="main">
+                    Mont Blanc Grey Chronograph Leather Men Watch (K206)
+                    <del class="text-gray-500 text-sm ml-1">₹2,999</del>
+                </a>
+            </h2>
+
+            <!-- Buttons -->
+            <div class="space-y-2">
+                <!-- Add to Cart -->
+                <button onclick="addToCart(
+                     'Mont Blanc Grey Chronograph Leather Men Watch (K206)',
+                     'watch3.html',
+                     'https://glorywatches.shop/cdn/shop/files/Screenshot2025-02-17at7.55.44PM.png?v=1739802589&width=713'
+                     )" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                </button>
+
+                <!-- 60% Off -->
+                <button class="bg-gray-900 text-[#0DAF7C] px-4 py-2 rounded hover:bg-black w-full">
+                    <a href="watch3.html" target="main"><b>₹60% off</b></a>
+                </button>
+
+                <!-- Buy Now -->
+                <button class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <a href="watch3.html" target="main"><b>Buy Now for ₹1,199</b></a>
+                </button>
+            </div>
+
+        </div>
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center max-w-xs mx-auto">
+
+            <!-- Clickable Image with SOLD OUT badge -->
+            <div class="relative">
+                <a href="watch5.html" target="main">
+                    <img src="https://www.azonehub.in/cdn/shop/files/bdaa5e42-4457-41c8-9fda-4c65364c9b67.jpg?v=1745217744&width=713"
+                        alt="Category 1" class="mx-auto mb-2 rounded-lg">
+                </a>
+
+                <!-- SOLD OUT badge -->
+                <div
+                    class="absolute bottom-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg animate-pulse-custom">
+                    SOLD OUT
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="font-semibold mb-2">
+                <a href="watch5.html" target="main">
+                    Luxury Branded Yachat Master watch
+                    <del class="text-gray-500 text-sm ml-1">₹39,999</del>
+                </a>
+            </h2>
+
+            <!-- Buttons -->
+            <div class="space-y-2">
+                <!-- Add to Cart -->
+                <button onclick="addToCart(
+                     'Luxury Branded Yachat Master watch',
+                     'watch5.html',
+                     'https://www.azonehub.in/cdn/shop/files/bdaa5e42-4457-41c8-9fda-4c65364c9b67.jpg?v=1745217744&width=713'
+                     )" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                </button>
+
+                <!-- 70% Off -->
+                <button class="bg-gray-900 text-[#0DAF7C] px-4 py-2 rounded hover:bg-black w-full">
+                    <a href="watch5.html" target="main"><b>₹95% off</b></a>
+                </button>
+
+                <!-- Buy Now -->
+                <button class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <a href="watch5.html" target="main"><b>Buy Now for ₹1,999</b></a>
+                </button>
+            </div>
+
+        </div>
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center max-w-xs mx-auto">
+
+            <!-- Clickable Image with SOLD OUT badge -->
+            <div class="relative">
+                <a href="watch7.html" target="main">
+                    <img src="https://azonehub.com/cdn/shop/files/4_a44e4fec-b432-412e-a177-29e856301356.jpg?v=1749729387"
+                        alt="Category 1" class="mx-auto mb-2 rounded-lg">
+                </a>
+
+                <!-- SOLD OUT badge -->
+                <div
+                    class="absolute bottom-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg animate-pulse-custom">
+                    Sale
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="font-semibold mb-2">
+                <a href="watch7.html" target="main">
+                    Branded Date Watch (King Ko*Li Using it )
+                    <del class="text-gray-500 text-sm ml-1">₹5,899</del>
+                </a>
+            </h2>
+
+            <!-- Buttons -->
+            <div class="space-y-2">
+                <!-- Add to Cart -->
+                <button onclick="addToCart(
+                     'Branded Date Watch (King Ko*Li Using it )',
+                     'watch7.html',
+                     'https://azonehub.com/cdn/shop/files/4_a44e4fec-b432-412e-a177-29e856301356.jpg?v=1749729387'
+                     )" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                </button>
+
+                <!-- 50% Off -->
+                <button class="bg-gray-900 text-[#0DAF7C] px-4 py-2 rounded hover:bg-black w-full">
+                    <a href="watch7.html" target="main"><b>₹50% off</b></a>
+                </button>
+
+                <!-- Buy Now -->
+                <button class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <a href="watch7.html" target="main"><b>Buy Now for ₹2,399</b></a>
+                </button>
+            </div>
+
+        </div>
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center max-w-xs mx-auto">
+
+            <!-- Clickable Image with SOLD OUT badge -->
+            <div class="relative">
+                <a href="watch4.html" target="main">
+                    <img src="https://www.azonehub.in/cdn/shop/files/32.webp?v=1752129965&width=713" alt="Category 1"
+                        class="mx-auto mb-2 rounded-lg">
+                </a>
+
+                <!-- SOLD OUT badge -->
+                <div
+                    class="absolute bottom-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg animate-pulse-custom">
+                    New
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="font-semibold mb-2">
+                <a href="watch4.html" target="main">
+                    Luxury Branded 7A Watch
+                    <del class="text-gray-500 text-sm ml-1">₹5,899</del>
+                </a>
+            </h2>
+
+            <!-- Buttons -->
+            <div class="space-y-2">
+                <!-- Add to Cart -->
+                <button onclick="addToCart(
+                     'Luxury Branded 7A Watch',
+                     'watch4.html',
+                     'https://www.azonehub.in/cdn/shop/files/32.webp?v=1752129965&width=713'
+                     )" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                </button>
+
+                <!-- 70% Off -->
+                <button class="bg-gray-900 text-[#0DAF7C] px-4 py-2 rounded hover:bg-black w-full">
+                    <a href="watch4.html" target="main"><b>₹70 % off </b></a>
+                </button>
+
+                <!-- Buy Now -->
+                <button class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <a href="watch4.html" target="main"><b>Buy Now for ₹1,769</b></a>
+                </button>
+            </div>
+
+        </div>
+         <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center max-w-xs mx-auto">
+
+            <!-- Clickable Image with SOLD OUT badge -->
+            <div class="relative">
+                <a href="watch6.html" target="main">
+                    <img src="https://azonehub.com/cdn/shop/files/489844152_17897003025183343_5495993005863025051_n.jpg?v=1749727342&width=713"
+                        alt="Category 1" class="mx-auto mb-2 rounded-lg">
+                </a>
+
+                <!-- SOLD OUT badge -->
+                <div
+                    class="absolute bottom-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg animate-pulse-custom">
+                    Sale
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="font-semibold mb-2">
+                <a href="watch6.html" target="main">
+                    Luxury Branded 7A Submariner Watch
+                    <del class="text-gray-500 text-sm ml-1">₹5,899</del>
+                </a>
+            </h2>
+
+            <!-- Buttons -->
+            <div class="space-y-2">
+                <!-- Add to Cart -->
+                <button onclick="addToCart(
+                     'Luxury Branded 7A Submariner Watch',
+                     'watch6.html',
+                     'https://azonehub.com/cdn/shop/files/489844152_17897003025183343_5495993005863025051_n.jpg?v=1749727342&width=713'
+                     )" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                </button>
+
+                <!-- 60% Off -->
+                <button class="bg-gray-900 text-[#0DAF7C] px-4 py-2 rounded hover:bg-black w-full">
+                    <a href="watch6.html" target="main"><b>₹60% off</b></a>
+                </button>
+
+                <!-- Buy Now -->
+                <button class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <a href="watch6.html" target="main"><b>Buy Now for ₹2,299</b></a>
+                </button>
+            </div>
+
+        </div>
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center max-w-xs mx-auto">
+
+            <!-- Clickable Image with SOLD OUT badge -->
+            <div class="relative">
+                <a href="watch1.html" target="main">
+                    <img src="https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3df0c06c/images/Fastrack/Catalog/3286KM01_1.jpg?sw=600&sh=600"
+                        alt="Fastrack Thor Watch" class="mx-auto mb-2 rounded-lg">
+                </a>
+
+                <!-- SOLD OUT badge -->
+                <div
+                    class="absolute bottom-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg animate-pulse-custom">
+                    New
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="font-semibold mb-2">
+                <a href="watch1.html" target="main">
+                    Fastrack Thor Quartz Multifunction Red Dial Metal Strap Watch
+                    <del class="text-gray-500 text-sm ml-1">₹5,195</del>
+                </a>
+            </h2>
+
+            <!-- Buttons -->
+            <div class="space-y-2">
+                <!-- Add to Cart -->
+                <button onclick="addToCart(
                      'Fastrack Thor Quartz Multifunction Red Dial Metal Strap Watch for Guys',
                      'watch1.html',
                      'https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3df0c06c/images/Fastrack/Catalog/3286KM01_1.jpg?sw=600&sh=600'
-                     )" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"> <i
-                    class="fa-solid fa-cart-shopping"></i>
-                To Cart
-            </button>
+                     )" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                </button>
 
-            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
-                    href="https://rzp.io/rzp/hKB7mni">₹1,999</a></button>
-            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a href="watch1.html"
-                    target="main">Details</a></button>
+                <!-- 60% Off -->
+                <button class="bg-gray-900 text-[#0DAF7C] px-4 py-2 rounded hover:bg-black w-full">
+                    <a href="watch1.html" target="main"><b>₹60% off</b></a>
+                </button>
+
+                <!-- Buy Now -->
+                <button class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <a href="watch1.html" target="main"><b>Buy Now for ₹1,999</b></a>
+                </button>
+            </div>
 
         </div>
-        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center">
-            <img src="https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw2b3b7823/images/Fastrack/Catalog/33056296QM02P_1.jpg?sw=600&sh=600"
-                alt="Category 1" class="mx-auto mb-2 rounded-lg">
-            <h2 class="font-semibold mb-2"><a href="watch2.html" target="main">Fastrack Mixmatched Quartz Analog Metal
-                    Strap Watch For Couple <del>5,695</del></a></h2>
+       
+        <div class="bg-white text-black rounded-xl shadow-lg p-4 text-center max-w-xs mx-auto">
 
-            <button onclick="addToCart(
+            <!-- Clickable Image with SOLD OUT badge -->
+            <div class="relative">
+                <a href="watch2.html" target="main">
+                    <img src="https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw2b3b7823/images/Fastrack/Catalog/33056296QM02P_1.jpg?sw=600&sh=600"
+                        alt="Couple Watch" class="mx-auto mb-2 rounded-lg">
+                </a>
+
+                <!-- SOLD OUT badge -->
+                <div
+                    class="absolute bottom-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg animate-pulse-custom">
+                    New
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="font-semibold mb-2">
+                <a href="watch2.html" target="main">
+                    Fastrack Mixmatched Quartz Analog Metal Strap Watch
+                    <del class="text-gray-500 text-sm ml-1">₹5,695</del>
+                </a>
+            </h2>
+
+            <!-- Buttons -->
+            <div class="space-y-2">
+                <!-- Add to Cart -->
+                <button onclick="addToCart(
                      'Fastrack Mixmatched Quartz Analog Brown Dial With Brown Metal Strap Watch For Couple',
                      'watch2.html',
                      'https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw2b3b7823/images/Fastrack/Catalog/33056296QM02P_1.jpg?sw=600&sh=600'
-                     )" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"> <i
-                    class="fa-solid fa-cart-shopping"></i>
-                To Cart
-            </button>
+                     )" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                </button>
 
-            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a
-                    href="https://rzp.io/rzp/hKB7mni">₹2,149</a></button>
-            <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"><a href="watch2.html"
-                    target="main">Details</a></button>
+                <!-- 60% Off -->
+                <button class="bg-gray-900 text-[#0DAF7C] px-4 py-2 rounded hover:bg-black w-full">
+                    <a href="watch2.html" target="main"><b>₹60% off</b></a>
+                </button>
+
+                <!-- Buy Now -->
+                <button class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">
+                    <a href="watch2.html" target="main"><b>Buy Now for ₹2,149</b></a>
+                </button>
+            </div>
 
         </div>
 
@@ -140,10 +513,14 @@
 
     <!-- Footer (Mobile View Only Links) -->
     <footer class="md:hidden mt-10 px-6 py-6 bg-purple-800 text-center text-sm text-purple-200 space-y-2">
+        <a href="index.html" target="main" class="block hover:text-white">Home</a>
         <a href="privacy.html" target="main" class="block hover:text-white">Privacy Policy</a>
         <a href="tearms.html" target="main" class="block hover:text-white">Terms & Conditions</a>
         <a href="refund.html" target="main" class="block hover:text-white">Refund Policy</a>
         <a href="contact.html" target="main" class="block hover:text-white">Contact Info</a>
+    </footer>
+    <footer class="bg-purple-700 text-white text-center text-sm">
+        <p>&copy; 2025 FlipHeaven. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript -->
