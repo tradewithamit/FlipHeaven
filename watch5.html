@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details - FlipHeaven</title>
+  <!-- Font Awesome v6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="shortcut icon"
+    href="https://cdn-icons-png.freepik.com/512/869/869441.png?uid=R28211235&ga=GA1.1.878421257.1716085412"
+    type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dussehra-banner {
+      width: 100%;
+      background: linear-gradient(90deg, #ff9933, #ffcc66);
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+      padding: 6px 10px;
+      font-size: 14px;
+      font-family: sans-serif;
+      margin-top: 10px;
+      /* Header ke baad thoda gap */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Mobile responsive tweaks */
+    @media (max-width: 600px) {
+      .dussehra-banner {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+    }
+
+    .address {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+      background-color: #f9f9f9;
+    }
+
+    .address h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .address label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .address input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+      box-sizing: border-box;
+    }
+
+    .order-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #1a73e8;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .order-btn:hover {
+      background-color: #0f5bd7;
+    }
+  </style>
+
+</head>
+
+<body class="bg-gradient-to-b from-purple-600 to-purple-300 min-h-screen">
+  <!-- Header -->
+  <header class="bg-purple-700 text-white flex justify-between items-center p-4 px-6">
+    <div class="text-2xl font-bold">FlipHeaven</div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="watchpage.html" target="main" class="hover:underline">Home</a>
+      <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+      <a href="tearms.html" class="hover:underline">Terms & Conditions</a>
+      <a href="refund.html" class="hover:underline">Refund Policy</a>
+      <a href="contact.html" class="hover:underline">Contact Info</a>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav class="flex md:hidden">
+      <a href="index.html" class="hover:underline text-white font-semibold">Home</a>
+    </nav>
+  </header>
+  <div class="dussehra-banner">
+    🎉 60% Discount on every product – Dussehra Special 🎉
+  </div>
+
+  <!-- Product Details Section -->
+  <div class="container mx-auto px-4 py-10">
+    <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
+      <!-- Product Images -->
+      <div class="md:w-1/2 p-4 flex justify-center">
+        <img
+          src="https://www.azonehub.in/cdn/shop/files/bdaa5e42-4457-41c8-9fda-4c65364c9b67.jpg?v=1745217744&width=713"
+          alt="Product" class="rounded-lg w-full max-w-sm" />
+      </div>
+
+
+      <!-- Product Info -->
+      <div class="md:w-1/2 p-6 space-y-4">
+        <h1 class="text-2xl font-bold">Luxury Branded Yachat Master watch</h1>
+        <p class="text-gray-700 text-sm">
+          Not Available (SOLD OUT)
+        </p>
+        <div class="flex items-center space-x-2">
+          <span class="bg-yellow-400 text-black px-2 py-1 text-sm rounded">4.0 ★</span>
+          <span class="text-blue-600 text-sm">(21,708 reviews)</span>
+        </div>
+        <div class="text-red-600 text-lg font-semibold">
+          -95%
+          <span class="line-through text-gray-500">₹39,999</span>
+        </div>
+        <div class="text-2xl font-bold text-green-700">₹1,999</div>
+
+        <!-- Offers -->
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <p class="font-semibold mb-2">Offers:</p>
+          <ul class="list-disc ml-5 text-sm text-gray-700">
+            <li>Cashback upto ₹450</li>
+            <li>Bank Offers not available</li>
+            <li>GST invoice available</li>
+          </ul>
+        </div>
+
+        <!-- Buy Options -->
+        <div class="flex items-center gap-4">
+          <select class="border rounded px-3 py-1">
+            <option>Quantity: 1</option>
+          </select>
+          <!-- <button class="bg-orange-500 text-white px-4 py-2 rounded font-semibold hover:bg-orange-600">
+            <a href="https://rzp.io/rzp/hKB7mni">Buy Now</a>
+          </button> -->
+        </div>
+        <!-- Delivery Info -->
+        <p class="text-sm text-gray-500 mt-2">
+          FREE delivery by <strong id="delivery-date">Wednesday, 30 July</strong>
+        </p>
+
+        <p class="text-sm text-gray-600">
+          Sold by <strong>Psyler</strong> | Delivered by Amazon
+        </p>
+      </div>
+      <form>
+        <div class="address">
+          <h3>Shipping Address</h3>
+
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+          <label for="pincode">Pin Code</label>
+          <input type="number" id="pincode" name="pincode" placeholder="Enter pin code" required>
+
+          <label for="street">Address / Area</label>
+          <input type="text" id="street" name="street" placeholder="Enter your street or area" required>
+
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" placeholder="Enter city" required>
+
+          <button id="orderBtn" class="order-btn" disabled style="background-color: grey; color: white; font-weight: bold; padding: 10px 20px; border: none; border-radius: 5px; cursor: not-allowed;">
+    🔒 Sold Out
+</button>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-purple-700 text-white text-center py-6 mt-10 space-y-2 text-sm">
+    <p>&copy; 2025 FlipHeaven. All rights reserved.</p>
+    <div class="flex justify-center flex-wrap gap-4">
+      <a href="watchpage.html" target="main" class="hover:text-purple-300">Home</a>
+      <a href="privacy.html" target="main" class="hover:underline">Privacy Policy</a>
+      <a href="tearms.html" target="main" class="hover:underline">Terms & Conditions</a>
+      <a href="refund.html" target="main" class="hover:underline">Refund Policy</a>
+      <a href="contact.html" target="main" class="hover:underline">Contact Info</a>
+    </div>
+  </footer>
+
+
+  <script>
+    document.getElementById('orderBtn').addEventListener('click', function (e) {
+      const form = this.closest('form');
+      if (!form.checkValidity()) {
+        e.preventDefault(); // Stop redirect
+        form.reportValidity(); // Show errors
+      }
+    });
+  </script>
+  <script>
+    // Set delivery date = today + 7 days
+    const today = new Date();
+    today.setDate(today.getDate() + 7);
+
+    const options = { weekday: 'long', day: 'numeric', month: 'long' };
+    const formatted = today.toLocaleDateString('en-IN', options);
+
+    document.getElementById("delivery-date").innerText = formatted;
+  </script>
+
+</body>
+
+
+</html>
