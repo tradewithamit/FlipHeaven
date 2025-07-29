@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon - FlipHeaven</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+    }
+  </style>
 </head>
-<body>
-    product not listed here"pending"
+<body class="flex flex-col min-h-screen text-white">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-4 bg-purple-700">
+    <h1 class="text-xl font-bold">FlipHeaven</h1>
+    <nav class="hidden md:flex space-x-4">
+      <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+      <a href="tearms.html" class="hover:underline">Terms & Conditions</a>
+      <a href="refund.html" class="hover:underline">Refund Policy</a>
+      <a href="contact.html" class="hover:underline">Contact Info</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center px-4">
+    <div class="text-center max-w-xl">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">🚧 Products Coming Soon!</h2>
+      <p class="text-lg md:text-xl font-medium mb-6">We are currently working hard to bring you amazing products. 🛍️<br><span class="font-semibold">Stay tuned & connected for exciting updates! 🔔</span></p>
+      <a href="#" class="bg-white text-purple-700 font-bold px-6 py-2 rounded-full hover:bg-purple-100 transition">Contact Us</a>
+    </div>
+  </main>
+
+  <!-- Footer (Mobile only) -->
+  <footer class="md:hidden bg-purple-800 text-sm text-center py-4 space-y-1">
+    <div><a href="privacy.html" class="block hover:underline">Privacy Policy</a></div>
+    <div><a href="tearms.html" class="block hover:underline">Terms & Conditions</a></div>
+    <div><a href="refund.html" class="block hover:underline">Refund Policy</a></div>
+    <div><a href="contact.html" class="block hover:underline">Contact Info</a></div>
+  </footer>
+
 </body>
 </html>
